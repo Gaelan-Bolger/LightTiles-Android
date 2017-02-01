@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/space_16dp"
+    android:orientation="vertical"
+    android:showDividers="beginning|middle|end">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@drawable/space_16dp"
+        android:orientation="horizontal"
+        android:showDividers="beginning|middle|end">
+
+        <day.cloudy.apps.tiles.view.LightTileView
+            android:id="@+id/light_tile_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <day.cloudy.apps.tiles.view.LightTileView
+            android:id="@+id/light_tile_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <day.cloudy.apps.tiles.view.LightTileView
+            android:id="@+id/light_tile_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@drawable/space_16dp"
+        android:orientation="horizontal"
+        android:showDividers="beginning|middle|end">
+
+        <day.cloudy.apps.tiles.view.LightTileView
+            android:id="@+id/light_tile_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <day.cloudy.apps.tiles.view.LightTileView
+            android:id="@+id/light_tile_5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <day.cloudy.apps.tiles.view.LightTileView
+            android:id="@+id/light_tile_6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@drawable/space_16dp"
+        android:orientation="horizontal"
+        android:showDividers="beginning|middle|end">
+
+        <day.cloudy.apps.tiles.view.LightTileView
+            android:id="@+id/light_tile_7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <day.cloudy.apps.tiles.view.LightTileView
+            android:id="@+id/light_tile_8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <day.cloudy.apps.tiles.view.LightTileView
+            android:id="@+id/light_tile_9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@drawable/space_16dp"
+        android:orientation="horizontal"
+        android:showDividers="beginning|middle|end">
+
+        <day.cloudy.apps.tiles.view.LightTileView
+            android:id="@+id/light_tile_10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <day.cloudy.apps.tiles.view.LightTileView
+            android:id="@+id/light_tile_11"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <day.cloudy.apps.tiles.view.LightTileView
+            android:id="@+id/light_tile_12"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

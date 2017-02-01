@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="found_bridges">
+        <item quantity="zero">Found %d bridges:</item>
+        <item quantity="one">Found %d bridge:</item>
+        <item quantity="other">Found %d bridges:</item>
+    </plurals>
+</resources>

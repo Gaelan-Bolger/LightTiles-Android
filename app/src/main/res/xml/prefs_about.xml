@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <day.cloudy.apps.tiles.settings.PreferenceCategory
+        android:key="about_options"
+        android:title="@string/about">
+        <Preference
+            android:key="open_source_software"
+            android:title="@string/open_source_software" />
+        <Preference
+            android:enabled="false"
+            android:key="app_version"
+            android:summary="@string/app_version"
+            android:title="@string/app_developer" />
+    </day.cloudy.apps.tiles.settings.PreferenceCategory>
+</PreferenceScreen>

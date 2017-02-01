@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <day.cloudy.apps.tiles.settings.PreferenceCategory
+        android:key="debug_options"
+        android:title="Debug">
+        <SwitchPreferenceCompat
+            android:key="debug_drawer_enabled"
+            android:title="Enable debug drawer" />
+    </day.cloudy.apps.tiles.settings.PreferenceCategory>
+</PreferenceScreen>

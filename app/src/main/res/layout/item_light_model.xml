@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/space_16dp"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:orientation="horizontal"
+    android:showDividers="beginning|middle|end">
+
+    <ImageView
+        android:id="@+id/image_view_light_icon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_phlight_white_and_color_e27_b22"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_view_light_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-light"
+        android:lines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        tools:text="Light name" />
+</LinearLayout>

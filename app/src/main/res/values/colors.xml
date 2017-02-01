@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorWindow">#282828</color>
+    <color name="colorPrimary">#a61244</color>
+    <color name="colorPrimaryDark">#a61244</color>
+    <color name="colorAccent">#a61244</color>
+
+    <color name="icon_light_normal">#FFFFFFFF</color>
+    <color name="icon_light_disable">#88FFFFFF</color>
+</resources>

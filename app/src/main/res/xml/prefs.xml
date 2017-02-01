@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <day.cloudy.apps.tiles.settings.PreferenceCategory
+        android:key="general"
+        android:title="@string/general">
+        <Preference
+            android:key="forget_bridge"
+            android:summary="@string/forget_bridge_summary"
+            android:title="@string/forget_bridge" />
+    </day.cloudy.apps.tiles.settings.PreferenceCategory>
+</PreferenceScreen>

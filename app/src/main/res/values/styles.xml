@@ -1,0 +1,73 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/colorWindow</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:alertDialogTheme">@style/AppAlertDialogTheme</item>
+        <item name="alertDialogTheme">@style/AppAlertDialogTheme</item>
+        <item name="preferenceTheme">@style/AppPreferenceThemeOverlay</item>
+    </style>
+
+    <style name="AppTheme.Intro" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/colorWindow</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:alertDialogTheme">@style/AppAlertDialogTheme</item>
+        <item name="alertDialogTheme">@style/AppAlertDialogTheme</item>
+        <item name="preferenceTheme">@style/AppPreferenceThemeOverlay</item>
+    </style>
+
+    <style name="AppTheme.Dialog" parent="Theme.AppCompat.Dialog.MinWidth">
+        <item name="android:windowBackground">@color/colorWindow</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:alertDialogTheme">@style/AppAlertDialogTheme</item>
+        <item name="alertDialogTheme">@style/AppAlertDialogTheme</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:colorBackground">@color/colorWindow</item>
+    </style>
+
+    <style name="AppAlertDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:background">@color/colorWindow</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppPreferenceThemeOverlay" parent="@style/PreferenceThemeOverlay">
+        <item name="android:textAppearanceLarge">@style/TextAppearance.Preference.Title</item>
+        <item name="android:textAppearanceSmall">@style/TextAppearance.Preference.Summary</item>
+    </style>
+
+    <style name="TextAppearance">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextAppearance.Preference" />
+
+    <style name="TextAppearance.Preference.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.Preference.Summary">
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

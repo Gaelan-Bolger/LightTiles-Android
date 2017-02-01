@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <day.cloudy.apps.tiles.settings.PreferenceCategory
+        android:key="root_options"
+        android:title="@string/root">
+        <SwitchPreferenceCompat
+            android:key="auto_add_tiles"
+            android:summary="@string/auto_add_tiles_summary"
+            android:title="@string/auto_add_tiles" />
+        <SwitchPreferenceCompat
+            android:key="auto_remove_tiles"
+            android:summary="@string/auto_remove_tiles_summary"
+            android:title="@string/auto_remove_tiles" />
+    </day.cloudy.apps.tiles.settings.PreferenceCategory>
+</PreferenceScreen>
