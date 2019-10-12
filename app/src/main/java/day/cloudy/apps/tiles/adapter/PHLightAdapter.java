@@ -1,7 +1,6 @@
 package day.cloudy.apps.tiles.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +9,8 @@ import android.widget.Checkable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.philips.lighting.model.PHLight;
 
 import java.util.ArrayList;
@@ -17,8 +18,6 @@ import java.util.List;
 
 import day.cloudy.apps.tiles.R;
 import day.cloudy.apps.tiles.hue.HueUtils;
-
-import static butterknife.ButterKnife.findById;
 
 /**
  * Created by Gaelan Bolger on 12/23/2016.
@@ -120,8 +119,8 @@ public class PHLightAdapter extends RecyclerView.Adapter<PHLightAdapter.Holder> 
 
         Holder(View itemView) {
             super(itemView);
-            icon = findById(itemView, R.id.image_view_light_icon);
-            name = findById(itemView, R.id.text_view_light_name);
+            icon = itemView.findViewById(R.id.image_view_light_icon);
+            name = itemView.findViewById(R.id.text_view_light_name);
         }
 
         void bind(PHLight item) {

@@ -5,12 +5,13 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBar;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceFragmentCompat;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
 
 import com.philips.lighting.hue.sdk.PHHueSDK;
 import com.philips.lighting.model.PHBridge;
@@ -143,7 +144,7 @@ public class SettingsActivity extends DebugDrawerActivity implements SharedPrefe
                             .setNotices(R.raw.notices)
                             .setNoticesCssStyle(R.string.licenses_dialog_css)
                             .setTitle(R.string.open_source_software)
-                            .build().showAppCompat();
+                            .build().show();
                     return true;
                 }
             });

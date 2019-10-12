@@ -1,6 +1,6 @@
 package day.cloudy.apps.tiles.service;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import day.cloudy.apps.tiles.model.TileComponent;
 

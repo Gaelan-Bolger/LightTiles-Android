@@ -2,12 +2,13 @@ package day.cloudy.apps.tiles.adapter;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.philips.lighting.hue.sdk.PHAccessPoint;
 
@@ -15,8 +16,6 @@ import java.util.List;
 
 import day.cloudy.apps.tiles.R;
 import timber.log.Timber;
-
-import static butterknife.ButterKnife.findById;
 
 /**
  * Created by Gaelan Bolger on 12/23/2016.
@@ -93,9 +92,9 @@ public class AccessPointAdapter extends RecyclerView.Adapter<AccessPointAdapter.
 
         Holder(View itemView) {
             super(itemView);
-            icon = findById(itemView, R.id.image_view_access_point_icon);
-            text1 = findById(itemView, R.id.text_view_access_point_mac);
-            text2 = findById(itemView, R.id.text_view_access_point_ip);
+            icon = itemView.findViewById(R.id.image_view_access_point_icon);
+            text1 = itemView.findViewById(R.id.text_view_access_point_mac);
+            text2 = itemView.findViewById(R.id.text_view_access_point_ip);
         }
 
         void bind(PHAccessPoint accessPoint) {
@@ -111,7 +110,7 @@ public class AccessPointAdapter extends RecyclerView.Adapter<AccessPointAdapter.
 
         HeaderHolder(View itemView) {
             super(itemView);
-            text1 = findById(itemView, R.id.text_view_access_point_header);
+            text1 = itemView.findViewById(R.id.text_view_access_point_header);
         }
 
         void bind(String headerText) {

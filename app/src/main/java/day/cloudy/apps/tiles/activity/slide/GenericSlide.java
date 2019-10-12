@@ -1,23 +1,22 @@
 package day.cloudy.apps.tiles.activity.slide;
 
-
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.res.ResourcesCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.core.content.res.ResourcesCompat;
+import androidx.fragment.app.Fragment;
+
 import butterknife.BindView;
 import day.cloudy.apps.tiles.R;
 
 import static butterknife.ButterKnife.bind;
-import static butterknife.ButterKnife.findById;
 
 /**
  * Created by Gaelan Bolger on 12/26/2016.
@@ -52,7 +51,7 @@ public class GenericSlide extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.slide_base, container, false);
-        inflater.inflate(R.layout.slide_conent_generic, (ViewGroup) findById(view, R.id.frame_bottom), true);
+        inflater.inflate(R.layout.slide_conent_generic, view.findViewById(R.id.frame_bottom), true);
         bind(this, view);
 
         vTitle.setText(getArguments().getString(EXTRA_TITLE));
