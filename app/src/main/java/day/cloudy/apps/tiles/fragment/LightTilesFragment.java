@@ -5,12 +5,14 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.HashMap;
 import java.util.List;
@@ -31,7 +33,6 @@ import day.cloudy.apps.tiles.utils.Spotlight;
 import day.cloudy.apps.tiles.view.LightTileView;
 
 import static butterknife.ButterKnife.bind;
-import static butterknife.ButterKnife.findById;
 import static day.cloudy.apps.tiles.utils.PackageUtils.isComponentEnabled;
 import static day.cloudy.apps.tiles.utils.PackageUtils.setComponentEnabled;
 import static day.cloudy.apps.tiles.utils.ResourceUtils.getDrawable;
@@ -99,7 +100,7 @@ public class LightTilesFragment extends Fragment {
                 ComponentName cn = new ComponentName(getActivity(), tileComponent.getServiceClass());
                 if (!isComponentEnabled(getPackageManager(), cn)) {
                     setComponentEnabled(getPackageManager(), cn, true);
-                    Snackbar.make(findById(getActivity(), R.id.coordinator_layout), R.string.tile_enabled, Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(requireActivity().findViewById(R.id.coordinator_layout), R.string.tile_enabled, Snackbar.LENGTH_SHORT).show();
                 }
                 refreshTileView(tileComponent);
                 addQsTile(tileComponent);
@@ -137,12 +138,12 @@ public class LightTilesFragment extends Fragment {
                     ComponentName cn = new ComponentName(getActivity(), tileComponent.getServiceClass());
                     if (isComponentEnabled(getPackageManager(), cn)) {
                         setComponentEnabled(getPackageManager(), cn, false);
-                        Snackbar.make(findById(getActivity(), R.id.coordinator_layout), R.string.tile_disabled, Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(requireActivity().findViewById(R.id.coordinator_layout), R.string.tile_disabled, Snackbar.LENGTH_SHORT).show();
                     }
                     refreshTileView(tileComponent);
                     removeQsTile(tileComponent);
                 } else {
-                    Snackbar.make(findById(getActivity(), R.id.coordinator_layout), R.string.cant_delete_tile, Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(requireActivity().findViewById(R.id.coordinator_layout), R.string.cant_delete_tile, Snackbar.LENGTH_SHORT).show();
                 }
             }
         }).show(getChildFragmentManager(), "confirm_action");

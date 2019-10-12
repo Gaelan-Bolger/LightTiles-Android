@@ -2,10 +2,11 @@ package day.cloudy.apps.tiles.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import com.github.paolorotolo.appintro.AppIntro2;
 import com.philips.lighting.hue.sdk.PHAccessPoint;
@@ -13,6 +14,7 @@ import com.philips.lighting.hue.sdk.PHBridgeSearchManager;
 import com.philips.lighting.hue.sdk.PHHueSDK;
 import com.philips.lighting.hue.sdk.PHMessageType;
 import com.philips.lighting.hue.sdk.PHSDKListener;
+import com.philips.lighting.hue.sdk.utilities.impl.PHLog;
 import com.philips.lighting.model.PHBridge;
 import com.philips.lighting.model.PHBridgeConfiguration;
 import com.philips.lighting.model.PHBridgeResourcesCache;
@@ -47,6 +49,8 @@ public class IntroActivity extends AppIntro2 implements AccessPointSlide.OnAcces
         super.onCreate(savedInstanceState);
         mPrefs = AppPrefs.getInstance(this);
         mHueSdk = PHHueSDK.getInstance();
+
+        PHLog.setSdkLogLevel(PHLog.SUPPRESS);
 
         setWizardMode(true);
         showSkipButton(false);
@@ -149,12 +153,7 @@ public class IntroActivity extends AppIntro2 implements AccessPointSlide.OnAcces
                 mHueSdk.getAccessPointsFound().clear();
                 mHueSdk.getAccessPointsFound().addAll(list);
 
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        mAccessPointSlide.setAccessPoints(mHueSdk.getAccessPointsFound());
-                    }
-                });
+                runOnUiThread(() -> mAccessPointSlide.setAccessPoints(mHueSdk.getAccessPointsFound()));
             }
         }
 
@@ -163,21 +162,15 @@ public class IntroActivity extends AppIntro2 implements AccessPointSlide.OnAcces
             Timber.d("onAuthenticationRequired: ");
             mHueSdk.startPushlinkAuthentication(accessPoint);
 
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    goToSlide(3);
+            runOnUiThread(() -> {
+                goToSlide(3);
 
-                    mBridgeLinkSlide.startTimer(new BridgeLinkSlide.OnTimedOutListener() {
-                        @Override
-                        public void onTimedOut() {
-                            mHueSdk.stopPushlinkAuthentication();
-                            mBridgeLinkSlide.stopTimer();
+                mBridgeLinkSlide.startTimer(() -> {
+                    mHueSdk.stopPushlinkAuthentication();
+                    mBridgeLinkSlide.stopTimer();
 
-                            runOnUiThread(new BackStepRunnable(getString(R.string.operation_timed_out)));
-                        }
-                    });
-                }
+                    runOnUiThread(new BackStepRunnable(getString(R.string.operation_timed_out)));
+                });
             });
         }
 

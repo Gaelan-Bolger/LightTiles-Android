@@ -2,8 +2,6 @@ package day.cloudy.apps.tiles.activity.slide;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,13 +9,15 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import com.github.paolorotolo.appintro.ISlidePolicy;
 
 import butterknife.BindView;
 import day.cloudy.apps.tiles.R;
 
 import static butterknife.ButterKnife.bind;
-import static butterknife.ButterKnife.findById;
 
 /**
  * Created by Gaelan Bolger on 12/23/2016.
@@ -48,7 +48,7 @@ public class BridgeLinkSlide extends Fragment implements ISlidePolicy {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.slide_base, container, false);
-        inflater.inflate(R.layout.slide_content_bridge_link, (ViewGroup) findById(view, R.id.frame_bottom), true);
+        inflater.inflate(R.layout.slide_content_bridge_link, view.findViewById(R.id.frame_bottom), true);
         bind(this, view);
 
         vTitle.setText(R.string.slide_link_bridge_title);

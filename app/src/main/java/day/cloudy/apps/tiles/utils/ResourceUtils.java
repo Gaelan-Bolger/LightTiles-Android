@@ -3,7 +3,8 @@ package day.cloudy.apps.tiles.utils;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.DrawableRes;
+
+import androidx.annotation.DrawableRes;
 
 import day.cloudy.apps.tiles.R;
 

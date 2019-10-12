@@ -1,6 +1,6 @@
 package day.cloudy.apps.tiles.adapter;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by Gaelan Bolger on 9/11/2016.

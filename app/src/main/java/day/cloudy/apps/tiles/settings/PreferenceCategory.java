@@ -8,7 +8,7 @@ import day.cloudy.apps.tiles.R;
 /**
  * Created by Gaelan Bolger on 12/29/2016.
  */
-public class PreferenceCategory extends android.support.v7.preference.PreferenceCategory {
+public class PreferenceCategory extends androidx.preference.PreferenceCategory {
 
     public PreferenceCategory(Context context) {
         this(context, null);
